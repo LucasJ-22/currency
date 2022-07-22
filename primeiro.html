@@ -1,0 +1,45 @@
+
+<html>
+    <header>
+        
+        <script type="module" src="index.js"></script>
+
+    </header>
+
+    <Body>
+
+        <div>
+            <select name="dinero" id="di1"></select>
+
+            <input type="text" id="dvalue" name="value" disabled>
+
+            <select name="masdinero" id="di2">
+                
+            </select>
+        </div>
+        
+        
+    </Body>
+    <script>
+        
+
+        $(document).ready(function() {
+            function show(data) {
+                let sel = 
+                `<select>
+                    <option>rates</option>
+                </select>`;
+    
+    // Loop to access all rows 
+    for (let r of data.list) {
+        sel += `<select>
+            <option>${r.rates}</option>
+        </select>`;
+    }
+    // Setting innerHTML as tab variable
+    document.getElementById("di1").innerHTML = sel;
+}
+            
+        });
+    </script>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script type="text/javascript" src="./teste.js"></script>
+        <script type="text/javascript" src="jquery-3.6.0.slim.min.js"></script>
+        
+        <meta charset="UTF-8" />
+        <title>Test</title>
+    </head>
+    <body>
+        
+        <div id="f">
+            
+        </div>
+        <h1>Geraldão de Rivia</h1>
+        <!-- table for showing data -->
+        <select name="money" id="dinero">
+
+        </select>
+    </body>
+
+    
+
+    
+    <script>
+
+        $(document).ready(function() {
+        
+
+
+
+            function myF() {                
+                /*var d = document.getElementById("dinero");
+                var option = document.createElement("option");               
+
+
+                for(i = 0; i <=  - 1; i++){
+                    option.value = trData(data[i]);
+                    console.log(option.value);
+                    option.text = trData(data[i]);
+                    d.add(option);
+                }*/
+
+                
+                
+                console.log(trData());
+                
+                select = document.getElementById('dinero');
+
+                for (var i = 0; i <=  - 1; i++){
+                    var opt = document.createElement('option');
+                    opt.value = i;
+                    opt.innerHTML = i;
+                    select.appendChild(opt);
+                }
+                
+            }
+
+            myF();
+            
+        });
+        
+    </script>
+</html>
