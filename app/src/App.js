@@ -17,12 +17,22 @@ const App = () => {
   }
 
   React.useEffect(() => {
+    console.log("Minha pika")
     getCurrency()
   }, [])
 
+
   return (
     <div className="App">
-      <select name="" id="" onChange={(e) => setSelectedOption(e.target.value)}>
+      <select name="" id="din1" onChange={(e) => setSelectedOption(e.target.value)}>
+        {keys.map((key, index) => (
+          <option key={key} value={value[index]}>{key}</option>
+        ))}
+      </select>
+
+      <input value={selectedOption} readOnly />
+
+      <select name="" id="din2" onChange={(e) => setSelectedOption(e.target.value)}>
         {keys.map((key, index) => (
           <option key={key} value={value[index]}>{key}</option>
         ))}
